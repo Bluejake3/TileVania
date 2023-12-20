@@ -230,7 +230,6 @@ MonoBehaviour:
   bullet: {fileID: 2142620508621623725, guid: 88f007b596f3c1e4abb783e38dd452e7, type: 3}
   weapon: {fileID: 5759719224384164724}
   bodyStopping: 0.5
-  dragValue: 99
 --- !u!61 &6073599720659328524
 BoxCollider2D:
   m_ObjectHideFlags: 0
