@@ -14750,10 +14750,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 297839680546111793, guid: 369d4053274f79b4f98bf632caaab07a, type: 3}
-      propertyPath: m_ControlPath
-      value: <Gamepad>/rightTrigger
-      objectReference: {fileID: 0}
     - target: {fileID: 297839680899065181, guid: 369d4053274f79b4f98bf632caaab07a, type: 3}
       propertyPath: m_Name
       value: On Screen Control

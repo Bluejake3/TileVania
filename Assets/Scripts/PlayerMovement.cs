@@ -139,5 +139,27 @@ public class PlayerMovement : MonoBehaviour
             FindObjectOfType<GameSession>().ProcessPlayerDeath();
         }
     }
+
+    public void AlternateMovement(float xAxis, float yAxis){
+        if(moveInput.x != xAxis) moveInput.x= xAxis;
+        if(moveInput.y != yAxis) moveInput.y = yAxis;
+    }
+
+    public void AlternateJump(bool isPressed){
+        if(playerDead){return;}
+        if(doubleJumpDone){
+            if(!boxCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground")))return;
+            doubleJumpDone = false;
+        }
+        if(!boxCollider2D.IsTouchingLayers(LayerMask.GetMask("Ground"))) doubleJumpDone = true;
+        if(isPressed){
+            rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.x, jumpSpeed);
+        }
+    }
+
+    public void AlternateFire(){
+        if(playerDead){return;}
+        Instantiate(bullet, weapon.position, transform.rotation);
+    }
     
 }
