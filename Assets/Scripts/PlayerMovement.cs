@@ -51,6 +51,7 @@ public class PlayerMovement : MonoBehaviour
 
     void OnFire(InputValue value){
         if(playerDead){return;}
+        animation.SetTrigger("Shooting");
         Instantiate(bullet, weapon.position, transform.rotation);
     }
 
