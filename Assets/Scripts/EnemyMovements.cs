@@ -20,7 +20,7 @@ public class EnemyMovements : MonoBehaviour
         rigidbody2D.velocity = new Vector2(moveSpeed, 0f);  
     }
     void OnTriggerExit2D(Collider2D other){
-        if(other.tag == "Bullets") return;
+        if(other.tag == "Bullets" || other.tag == "Player") return;
         ChangeMoveSpeed();
         FlipEnemyFacing();
 
